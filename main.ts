@@ -75,9 +75,176 @@ a a a a a a a a a a a a a a a a
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `
+    //% blockIdentity=images._tile
+    export const tile4 = img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+3 . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`
+    //% blockIdentity=images._tile
+    export const tile5 = img`
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+`
+    //% blockIdentity=images._tile
+    export const tile6 = img`
+. . . . . . . . . . . . . . . . 
+. . 2 2 . . . . . . . . . . . . 
+. . 2 . . . 2 2 . . . 2 2 . 2 2 
+. 2 2 . . 2 2 . . . . . 2 . 2 2 
+2 2 2 2 2 2 2 . . . . . 2 . 2 2 
+2 2 2 2 2 2 2 2 2 . 2 2 2 2 . 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 . 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 . 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`
+    //% blockIdentity=images._tile
+    export const tile7 = img`
+. . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 . . . . 2 2 . . . . 
+2 2 2 2 . 2 2 . . 2 2 2 2 2 . . 
+2 2 2 2 2 2 2 2 . . . 2 2 2 2 . 
+2 2 2 2 2 2 . . . . . 2 2 2 2 . 
+2 2 2 2 2 2 2 . . . . 2 2 2 2 . 
+2 2 2 2 2 2 2 2 . . 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`
+    //% blockIdentity=images._tile
+    export const tile8 = img`
+. . . . . . 2 . . . . . . . . . 
+. . 2 . . . . 2 2 2 . . . 2 2 . 
+. 4 2 2 . . . . 4 2 . . . 4 2 . 
+2 4 4 2 . . 2 4 4 2 . . . 2 . . 
+2 2 2 4 2 . 2 4 2 2 2 . 2 2 . 2 
+2 4 2 4 4 2 2 4 4 4 2 2 2 2 . 2 
+2 2 4 4 4 4 4 4 2 2 4 4 2 4 2 2 
+2 4 4 2 2 2 2 4 4 4 2 2 4 2 4 2 
+2 4 4 2 2 2 4 4 4 4 4 4 4 4 4 2 
+2 2 4 4 a 4 2 2 2 2 a 4 4 2 4 2 
+a 2 4 4 4 a a 2 2 c 2 2 a 4 4 4 
+a 2 2 a 2 4 4 c c c 4 4 2 2 4 4 
+c a 2 2 c c c 4 2 c c c c a 4 2 
+2 c c c 4 4 a 4 4 4 4 2 c a 2 2 
+2 2 2 a a a c c c 2 2 4 c c c 2 
+c c c c c c 2 2 2 c c c c c c c 
+`
 }
 function level () {
-    duck = sprites.create(img`
+    if (current_level == 0) {
+        tiles.setTilemap(tiles.createTilemap(
+            hex`100008000000000000000000000000000000000300000000000000000001010101010101000000000000000000000000000000000101010101010101010000000000000005000000000000000000000000000000050000000000000101010101010101010500000000000000000000000000000001010101010101010101010101010101`,
+            img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . 2 2 2 2 2 2 2 
+. . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . 2 2 2 2 2 2 2 2 2 
+. . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8],
+            TileScale.Sixteen
+        ))
+    } else if (current_level == 1) {
+        tiles.setTilemap(tiles.createTilemap(
+            hex`1400080000000000000000000000000000000000000000030000000000000001010101000000000000010101000000010101000000000000010000000100000000000000000000000000000000000001000000000001010101010000000000000000000000000000050000000000000101010101000000000000000005000000000000000000000000000000000000000101010101010101010101010101010101010101`,
+            img`
+. . . . . . . . . . . . . . . . . . . . 
+. . . . . . . 2 2 2 2 . . . . . . 2 2 2 
+. . . 2 2 2 . . . . . . 2 . . . 2 . . . 
+. . . . . . . . . . . . . . . 2 . . . . 
+. 2 2 2 2 2 . . . . . . . . . . . . . . 
+. . . . . . . 2 2 2 2 2 . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8],
+            TileScale.Sixteen
+        ))
+    } else if (0 == 0) {
+        tiles.setTilemap(tiles.createTilemap(
+            hex`2000080000000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000010101010000000000000001010101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010101010000000000010000000001000000000500000000010101000000000000000000000000000000000000010000000000050000000000000000010101010000000000000000000000010000000000000001010101000000000000000000000000000000000000000000000000000000000808080808080808080808080808080808080808080808080808080808080808`,
+            img`
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+`,
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8],
+            TileScale.Sixteen
+        ))
+    } else {
+    	
+    }
+    duck.ay = 200
+    tiles.placeOnRandomTile(duck, myTiles.tile5)
+    duck.setFlag(SpriteFlag.StayInScreen, true)
+    scene.cameraFollowSprite(duck)
+    levels = 0
+}
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile3, function (sprite, location) {
+    current_level += 1
+    level()
+})
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (duck.vy == 0) {
+        duck.vy = -120
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location) {
+    game.over(false)
+})
+let levels = 0
+let current_level = 0
+let duck: Sprite = null
+duck = sprites.create(img`
 . . . . . . . . . . b 5 b . . . 
 . . . . . . . . . b 5 b . . . . 
 . . . . . . b b b b b b . . . . 
@@ -95,41 +262,7 @@ b b c c c d d d 5 5 5 5 5 d b .
 . . . . c c d d d 5 5 5 b b . . 
 . . . . . . c c c c c b b . . . 
 `, SpriteKind.Player)
-    controller.moveSprite(duck, 100, 0)
-    scene.setBackgroundColor(9)
-    duck.ay = 200
-    duck.setFlag(SpriteFlag.StayInScreen, true)
-    scene.cameraFollowSprite(duck)
-    levels = 0
-    tiles.setTilemap(tiles.createTilemap(
-            hex`100008000000000000000000000000000000000300000000000000000001010101010101000000000000000000000000000000000101010101010101010000000000000000000000000000000000000000000000000000000000000101010101010101010000000000000000000000000000000001010101010101010101010101010101`,
-            img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . 2 2 2 2 2 2 2 
-. . . . . . . . . . . . . . . . 
-2 2 2 2 2 2 2 2 2 . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . 2 2 2 2 2 2 2 2 2 
-. . . . . . . . . . . . . . . . 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-`,
-            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3],
-            TileScale.Sixteen
-        ))
-}
-scene.onHitWall(SpriteKind.Player, function (sprite) {
-    current_level = 0
-    levels = 0
-})
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile3, function (sprite, location) {
-    game.over(true)
-})
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (duck.vy == 0) {
-        duck.vy = -150
-    }
-})
-let current_level = 0
-let levels = 0
-let duck: Sprite = null
+scene.setBackgroundColor(9)
+controller.moveSprite(duck, 100, 0)
+current_level = 0
 level()
