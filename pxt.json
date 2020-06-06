@@ -1,7 +1,11 @@
 {
     "name": "leo Wingfield",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "animation": "*",
+        "corgio": "*",
+        "storyboard": "*",
+        "tilemaps": "github:microsoft/pxt-tilemaps#v1.7.1"
     },
     "description": "",
     "files": [
