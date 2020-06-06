@@ -246,7 +246,67 @@ c c c c c c 2 2 2 c c c c c c c
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `
+    //% blockIdentity=images._tile
+    export const tile13 = img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . 8 . . . . . . . . . . . . . 
+. . 8 8 . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`
+    //% blockIdentity=images._tile
+    export const tile14 = img`
+. . . . . . 2 . . . . . . . . . 
+. . 3 . . . . 2 2 2 . . . 2 2 . 
+. 3 2 2 . . . . 4 2 . . . 4 2 . 
+3 4 4 2 . . 2 4 4 2 . . . 2 . . 
+2 2 2 4 2 . 2 4 2 2 2 . 2 2 . 2 
+2 4 2 4 4 2 2 4 4 4 2 2 2 2 . 2 
+2 2 4 4 4 4 4 4 2 2 4 4 2 4 2 2 
+2 4 4 2 2 2 2 4 4 4 2 2 4 2 4 2 
+2 4 4 2 2 2 4 4 4 4 4 4 4 4 4 2 
+2 2 4 4 a 4 2 2 2 2 a 4 4 2 4 2 
+a 2 4 4 4 a a 2 2 c 2 2 a 4 4 4 
+a 2 2 a 2 4 4 c c c 4 4 2 2 4 4 
+c a 2 2 c c c 4 2 c c c c a 4 2 
+2 c c c 4 4 a 4 4 4 4 2 c a 2 2 
+2 2 2 a a a c c c 2 2 4 c c c 2 
+c c c c c c 2 2 2 c c c c c c c 
+`
+    //% blockIdentity=images._tile
+    export const tile15 = img`
+. . . . . . . . . . . . . . . . 
+. . . . 5 5 5 9 5 5 5 . . . . . 
+. . . 5 5 5 5 5 5 5 5 5 . . . . 
+. . 5 a 3 3 3 9 3 3 3 a 5 . . . 
+. 5 5 3 a 3 3 3 3 3 a 3 5 5 . . 
+. 5 5 3 3 a 4 9 4 a 3 3 5 5 . . 
+. 5 5 3 3 4 a 4 a 4 3 3 5 5 . . 
+. 9 5 9 3 9 4 2 4 9 3 9 5 9 . . 
+. 5 5 3 3 4 a 4 a 4 3 3 5 5 . . 
+. 5 5 3 3 a 4 9 4 a 3 3 5 5 . . 
+. 5 5 3 a 3 3 3 3 3 a 3 5 5 . . 
+. . 5 a 3 3 3 9 3 3 3 a 5 . . . 
+. . . 5 5 5 5 5 5 5 5 5 . . . . 
+. . . . 5 5 5 9 5 5 5 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`
 }
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile15, function (sprite, location) {
+    game.over(true)
+})
 function level () {
     if (current_level == 0) {
         tiles.setTilemap(tiles.createTilemap(
@@ -261,7 +321,7 @@ function level () {
 . . . . . . . . . . . . . . . . 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12],
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15],
             TileScale.Sixteen
         ))
     } else if (current_level == 1) {
@@ -277,12 +337,12 @@ function level () {
 . . . . . . . . . . . . . . . . . . . . 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12],
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15],
             TileScale.Sixteen
         ))
     } else if (current_level == 2) {
         tiles.setTilemap(tiles.createTilemap(
-            hex`2000080000000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000010101010000000000000001010101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010101010000000000010000000001000000000000000000010101000000000000000000000000000000000000010000000000050000000000000000010101010000000000000000000000010000000000000001010101000000000000000000000000000000000000000000000000000000000808080808080808080808080808080808080808080808080808080808080808`,
+            hex`2000080000000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000010101010000000000000001010101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010101010000000000010000000001000000000000000000010101000000000000000000000000000000000000010000000000050000000000000000010101010000000000000000000000010000000000000001010101000000000000000000000000000000000000000000000000000000000e0e0e0808080808080808080808080808080808080808080808080808080808`,
             img`
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . 2 2 2 2 . . . . . . . 2 2 2 2 
@@ -293,14 +353,14 @@ function level () {
 2 2 2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 `,
-            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12],
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15],
             TileScale.Sixteen
         ))
         game.showLongText("WATCH OUT FOR LAVA OR YOU LOOSE TWO LIVES", DialogLayout.Bottom)
     } else if (current_level == 3) {
-        game.showLongText("IF YOU FIND THE COIN YOU GET TWO EXTRA LIVES", DialogLayout.Bottom)
+        game.showLongText("IF YOU FIND THE COIN YOU GET TWO EXTRA LIVES BUT DON'T TOUCH THE FIRE", DialogLayout.Bottom)
         tiles.setTilemap(tiles.createTilemap(
-            hex`1e00120000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000010001000000000000000000000000000b0000000000000100000000000000000000000000000c00000000010101010000000000000000000c0000010000000c000000000000000000000000000000000000000001000000000000000000000001010101000101010000000000000c0000000000010000000000000000000000000000000000000000000000000000000100000000000c00000001010000000001000000000000000000000001000000010100000000000000000000000000000000000000000001010000000000000000000000000000000001010000000000000000000000000000000000000000010101010000000000000000000000000000010101010000000c00000000000000000000000000000000000000000000000000000000000000000000000000000101010100000000000000000000050000000001010101000000000000000000000000000000000000000000050000000000000000000000000000000000000000000000000000000000010101010100000000000000000000000000000000000000000000000000080808080808080808080808080808080808080808080808080808080808`,
+            hex`1e00120000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000010001000000000000000000000000000f0000000000000100000000000000000000000000000c00000000010101010000000000000000000c0000010000000c000000000000000000000000000000000000000001000000000000000000000001010101000101010000000000000c0000000000010000000000000000000000000000000000000000000000000000000100000000000c00000001010000000001000000000000000000000001000000010100000000000000000000000000000000000000000001010000000000000000000000000000000001010000000000000000000000000000000000000000010101010000000000000000000000000000010101010000000c000000000000000000000000000000000000000000000000000000000000000000000000000001010101000000000000000000000500000000010101010000000000000000000000000000000000000000000500000000000000000000000000000000000000000000000000000000000101010101000000000000000000000000000000000000000000000000000e0e0e080808080808080808080808080808080808080808080808080808`,
             img`
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . 2 . . . . . . . . . . . . 
@@ -321,9 +381,37 @@ function level () {
 2 2 2 2 2 . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 `,
-            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12],
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15],
             TileScale.Sixteen
         ))
+        for (let value of tiles.getTilesByType(myTiles.tile12)) {
+            FIRE = sprites.create(img`
+. . . . . . . . . . . . . . . . 
+2 2 5 2 . . . . . . . . . . . . 
+2 5 4 2 . . . . . . . . . . . . 
+4 5 5 5 2 . . . . . . . . . . . 
+2 4 5 5 5 4 5 5 5 5 2 2 . . . . 
+. 4 4 4 4 2 2 2 2 4 4 2 . . . . 
+. 4 2 4 4 5 5 2 4 2 2 2 . . . . 
+. . 2 4 4 5 8 c 2 2 4 2 . . . . 
+. . 2 2 8 4 c 8 8 8 2 2 . . . . 
+. . 2 2 8 8 5 c c 5 5 . . . . . 
+. 2 2 4 4 2 5 8 8 5 2 . . . . . 
+. 2 4 5 5 2 2 5 5 5 2 . . . . . 
+. 2 4 2 2 2 2 2 2 5 2 . . . . . 
+. 2 5 5 5 2 5 2 2 2 . . . . . . 
+. 5 2 4 . . . . . . . . . . . . 
+. . . 2 . . . . . . . . . . . . 
+`, SpriteKind.Enemy)
+            tiles.placeOnTile(FIRE, value)
+            tiles.setTileAt(value, myTiles.tile0)
+            animation.runMovementAnimation(
+            FIRE,
+            "c 0 -100 0 100 0 0",
+            2000,
+            true
+            )
+        }
     } else {
     	
     }
@@ -347,6 +435,9 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (duck.vy == 0) {
         duck.vy = -120
     }
+})
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile14, function (sprite, location) {
+    tiles.placeOnRandomTile(duck, myTiles.tile5)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     otherSprite.destroy()
@@ -386,7 +477,7 @@ b b c c c d d d 5 5 5 5 5 d b .
 `, SpriteKind.Player)
 scene.setBackgroundColor(9)
 controller.moveSprite(duck, 100, 0)
-current_level = 3
+current_level = 0
 info.setLife(5)
 level()
 for (let value of tiles.getTilesByType(myTiles.tile4)) {
@@ -409,32 +500,4 @@ for (let value of tiles.getTilesByType(myTiles.tile4)) {
 . . . . . . . . . . . . . . . . 
 `, SpriteKind.Food)
     tiles.placeOnTile(COIN, value)
-}
-for (let value of tiles.getTilesByType(myTiles.tile12)) {
-    FIRE = sprites.create(img`
-. . . . . . . . . . . . . . . . 
-2 2 5 2 . . . . . . . . . . . . 
-2 5 4 2 . . . . . . . . . . . . 
-4 5 5 5 2 . . . . . . . . . . . 
-2 4 5 5 5 4 5 5 5 5 2 2 . . . . 
-. 4 4 4 4 2 2 2 2 4 4 2 . . . . 
-. 4 2 4 4 5 5 2 4 2 2 2 . . . . 
-. . 2 4 4 5 8 c 2 2 4 2 . . . . 
-. . 2 2 8 4 c 8 8 8 2 2 . . . . 
-. . 2 2 8 8 5 c c 5 5 . . . . . 
-. 2 2 4 4 2 5 8 8 5 2 . . . . . 
-. 2 4 5 5 2 2 5 5 5 2 . . . . . 
-. 2 4 2 2 2 2 2 2 5 2 . . . . . 
-. 2 5 5 5 2 5 2 2 2 . . . . . . 
-. 5 2 4 . . . . . . . . . . . . 
-. . . 2 . . . . . . . . . . . . 
-`, SpriteKind.Enemy)
-    tiles.placeOnTile(FIRE, value)
-    tiles.setTileAt(value, myTiles.tile0)
-    animation.runMovementAnimation(
-    FIRE,
-    "c 0 -100 0 100 0 0",
-    2000,
-    true
-    )
 }
