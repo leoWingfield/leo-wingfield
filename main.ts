@@ -18,29 +18,59 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `
+    //% blockIdentity=images._tile
+    export const tile1 = img`
+a a a a a a a a a a a a a a a a 
+a a b a b a b a a b a b a b a a 
+a b a b a b a b b a b a b a b a 
+a a b a b a b a a b a b a b a a 
+a b a b a b a b b a b a b a b a 
+a a b a b a b a a b a b a b a a 
+a b a b a b a b b a b a b a b a 
+a a b a b a b a a b a b a b a a 
+a a b a b a b a a b a b a b a a 
+a b a b a b a b b a b a b a b a 
+a a b a b a b a a b a b a b a a 
+a b a b a b a b b a b a b a b a 
+a a b a b a b a a b a b a b a a 
+a b a b a b a b b a b a b a b a 
+a a b a b a b a a b a b a b a a 
+a a a a a a a a a a a a a a a a 
+`
 }
-let mySprite: Sprite = null
+let duck = sprites.create(img`
+. . . . . . . . . . b 5 b . . . 
+. . . . . . . . . b 5 b . . . . 
+. . . . . . b b b b b b . . . . 
+. . . . . b b 5 5 5 5 5 b . . . 
+. . . . b b 5 d 1 f 5 d 4 c . . 
+. . . . b 5 5 1 f f d d 4 4 4 b 
+. . . . b 5 5 d f b 4 4 4 4 b . 
+. . . b d 5 5 5 5 4 4 4 4 b . . 
+. b b d d d 5 5 5 5 5 5 5 b . . 
+b d d d b b b 5 5 5 5 5 5 5 b . 
+c d d b 5 5 d c 5 5 5 5 5 5 b . 
+c b b d 5 d c d 5 5 5 5 5 5 b . 
+c b 5 5 b c d d 5 5 5 5 5 5 b . 
+b b c c c d d d 5 5 5 5 5 d b . 
+. . . . c c d d d 5 5 5 b b . . 
+. . . . . . c c c c c b b . . . 
+`, SpriteKind.Player)
+controller.moveSprite(duck, 100, 0)
+scene.setBackgroundColor(9)
+duck.ay = 200
 tiles.setTilemap(tiles.createTilemap(
-            hex`10001000010304080103030303030303030303040607050806070709090909090909070506070508060705080808080808080605060705080607050103030303030303050607050806070506070709090909090b0607050806070506070b000000000000060705080607050605000000000000000607050806070506050000000000000006070502060705060500000000000000060705020607050605000000000000000607050206070500000000000000000006070508060707030303030304000000060705080a090909090909070500000006070508080808080808080605000000060707030303030303030307050000000a09090909090909090909090b000000`,
+            hex`1400080000000000000000000000000000000000000000000000000000000000000101010101010101010101000000000000000000000000000000000000000001010101010101010100000000000000000000000000000000000000000000000000000000000000000000000000000101010101010101010101010100000000000000000000000000000000000000000101010101010101010101010101010101010101`,
             img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . 2 2 2 2 2 2 2 2 2 2 2 
+. . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . 
+. . . . . . . 2 2 2 2 2 2 2 2 2 2 2 2 2 
+. . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,sprites.castle.tilePath1,sprites.castle.tileGrass2,sprites.castle.tilePath2,sprites.castle.tilePath3,sprites.castle.tilePath6,sprites.castle.tilePath4,sprites.castle.tilePath5,sprites.castle.tileGrass1,sprites.castle.tilePath8,sprites.castle.tilePath7,sprites.castle.tilePath9],
+            [myTiles.tile0,myTiles.tile1],
             TileScale.Sixteen
         ))
-controller.moveSprite(mySprite)
