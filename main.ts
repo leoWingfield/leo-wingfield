@@ -326,14 +326,14 @@ function level () {
         ))
     } else if (current_level == 1) {
         tiles.setTilemap(tiles.createTilemap(
-            hex`1400080000000000000000000000000000000000000000030000000000000001010101000000000000010101000000010101000000000000010000000100000000000000000000000000000000000001000000000001010101010000000000000000000000000000050000000000000101010101000000000000000005000000000000000000000000000000000000000101010101010101010101010101010101010101`,
+            hex`1400080000000000000000000000000000000000000000030000000000000001010101000000000000010101000000010101000000000000010000000100000000000000000000000000000000000001000000000001010101010000000000000000000000000000050000000000000001010101000000000000000005000000000000000000000000000000000000000101010101010101010101010101010101010101`,
             img`
 . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . 2 2 2 2 . . . . . . 2 2 2 
 . . . 2 2 2 . . . . . . 2 . . . 2 . . . 
 . . . . . . . . . . . . . . . 2 . . . . 
-. 2 2 2 2 2 . . . . . . . . 2 . . . . . 
-. . . . . . . 2 2 2 2 2 2 2 2 . . . . . 
+. 2 2 2 2 2 . . . . . . . . . . . . . . 
+. . . . . . . . 2 2 2 2 . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
@@ -387,21 +387,21 @@ function level () {
         for (let value of tiles.getTilesByType(myTiles.tile12)) {
             FIRE = sprites.create(img`
 . . . . . . . . . . . . . . . . 
-2 2 5 2 . . . . . . . . . . . . 
-2 5 4 2 . . . . . . . . . . . . 
-4 5 5 5 2 . . . . . . . . . . . 
-2 4 5 5 5 4 5 5 5 5 2 2 . . . . 
-. 4 4 4 4 2 2 2 2 4 4 2 . . . . 
-. 4 2 4 4 5 5 2 4 2 2 2 . . . . 
-. . 2 4 4 5 8 c 2 2 4 2 . . . . 
-. . 2 2 8 4 c 8 8 8 2 2 . . . . 
-. . 2 2 8 8 5 c c 5 5 . . . . . 
-. 2 2 4 4 2 5 8 8 5 2 . . . . . 
-. 2 4 5 5 2 2 5 5 5 2 . . . . . 
-. 2 4 2 2 2 2 2 2 5 2 . . . . . 
-. 2 5 5 5 2 5 2 2 2 . . . . . . 
-. 5 2 4 . . . . . . . . . . . . 
-. . . 2 . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . 5 4 5 . . . . . . 
+. . . 5 5 5 4 4 4 5 5 5 . . . . 
+. . . 5 4 2 2 2 2 2 4 5 5 5 . . 
+. . 5 5 2 a a a a 2 4 4 4 5 . . 
+. . 5 4 2 a 8 8 a a 4 2 5 5 . . 
+. . 5 4 4 a 8 8 8 a 4 2 4 5 . . 
+. . . 5 4 4 2 8 a 4 4 5 4 5 . . 
+. . . 5 4 4 4 2 2 4 2 5 4 4 . . 
+. . . . 5 4 5 4 2 4 5 5 4 4 . . 
+. . . . 2 2 5 4 2 2 2 2 . 5 . . 
+. . . . 5 5 5 4 5 4 4 4 . 5 . . 
+. . . . . . 5 5 4 5 5 5 . . . . 
 `, SpriteKind.Enemy)
             tiles.placeOnTile(FIRE, value)
             tiles.setTileAt(value, myTiles.tile0)
@@ -411,6 +411,7 @@ function level () {
             2000,
             true
             )
+            FIRE.startEffect(effects.fire)
         }
         for (let value of tiles.getTilesByType(myTiles.tile4)) {
             COIN = sprites.create(img`
@@ -709,7 +710,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
     info.changeLifeBy(-1)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile16, function (sprite, location) {
-    duck.say("which route shall we take? go up for the coin or down and stay safe!")
+    duck.say("which route shall we take? go up for the coin or down and stay safe!", 5000)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location) {
     tiles.placeOnRandomTile(duck, myTiles.tile5)
@@ -726,26 +727,26 @@ let current_level = 0
 let duck: Sprite = null
 game.splash("GET TO THE PORTAL          GOOD LUCK")
 duck = sprites.create(img`
-. . . . . . . . . . b 5 b . . . 
-. . . . . . . . . b 5 b . . . . 
-. . . . . . b b b b b b . . . . 
-. . . . . b b 5 5 5 5 5 b . . . 
-. . . . b b 5 d 1 f 5 d 4 c . . 
-. . . . b 5 5 1 f f d d 4 4 4 b 
-. . . . b 5 5 d f b 4 4 4 4 b . 
-. . . b d 5 5 5 5 4 4 4 4 b . . 
-. b b d d d 5 5 5 5 5 5 5 b . . 
-b d d d b b b 5 5 5 5 5 5 5 b . 
-c d d b 5 5 d c 5 5 5 5 5 5 b . 
-c b b d 5 d c d 5 5 5 5 5 5 b . 
-c b 5 5 b c d d 5 5 5 5 5 5 b . 
-b b c c c d d d 5 5 5 5 5 d b . 
-. . . . c c d d d 5 5 5 b b . . 
-. . . . . . c c c c c b b . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . f f f . . . . . . . . . . . . . . . . . . . . 
+. . . . . . f . . f . . . . . . . . . . . . . . . . . . . . 
+. . . . . f . . . . . . . . . . f f f f . . . . . . . . . . 
+. . . . . f . . . . . . . . . . f e 6 f f . . . . . . . . . 
+. . . . . f f f f f f f f f f f f 1 1 1 f . . . . . . . . . 
+. . . . . f e e e 1 1 e e 1 1 1 f 1 1 2 f . . . . . . . . . 
+. . . . . f e e 1 e 1 e e e 1 1 f f f f f . . . . . . . . . 
+. . . . . f e 1 1 e 1 1 e e 1 1 f . . . . . . . . . . . . . 
+. . . . . f 1 1 1 1 e 1 e e e 1 f . . . . . . . . . . . . . 
+. . . . . f f f f f f f f f f f f . . . . . . . . . . . . . 
+. . . . . f 1 f e f . . f e f e f . . . . . . . . . . . . . 
+. . . . . f e f 1 f . . f e f e f . . . . . . . . . . . . . 
+. . . . . f 1 f 1 f . . f 1 f 1 f . . . . . . . . . . . . . 
+. . . . . f e f e f . . f 1 f e f . . . . . . . . . . . . . 
+. . . . . f f f f f . . f f f f f . . . . . . . . . . . . . 
 `, SpriteKind.Player)
 scene.setBackgroundColor(9)
 controller.moveSprite(duck, 100, 0)
-current_level = 3
+current_level = 0
 info.setLife(5)
 level()
 game.onUpdate(function () {
@@ -767,4 +768,31 @@ game.onUpdate(function () {
 . . . . . f e f e f . . f 1 f e f . . . . . . . . . . . . . 
 . . . . . f f f f f . . f f f f f . . . . . . . . . . . . . 
 `)
+    if (duck.vy < 0) {
+        duck.setImage(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . f f f f . 
+. . . . . . . . . . . f e 6 f . 
+. . . . . . . . . f f f e e f f 
+. . . . . . . . f f 1 f 1 1 2 f 
+. . . . . . f f f 1 e f f f f f 
+. . . . f f e e 1 e e f e f . . 
+. . . f f e 1 e 1 1 f f 1 f f f 
+. f f f 1 e 1 e 1 f f f f e 1 f 
+. f e e 1 1 e 1 f f f . f f f f 
+. f e e e 1 f f f e f f f . . . 
+. f f f f f f . f f e 1 f . . . 
+. f e f 1 f . . . f f e f . . . 
+. f e f e f . . . . f f f . . . 
+. f 1 f e f . . . . . . . . . . 
+. f f f f f . . . . . . . . . . 
+`)
+    } else if (false) {
+    	
+    } else {
+    	
+    }
+    if (duck.vx < 0) {
+        duck.image.flipX()
+    }
 })
